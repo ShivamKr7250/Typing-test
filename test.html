@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Sans', sans-serif;
+        }
+
+        .mainDiv {
+            width: 100;
+            height: 100vh;
+            position: relative;
+            background: #3498db;
+        }
+
+        .centerDiv {
+            position: absolute;
+            top: 50;
+            left: 50;
+            transform: translate(50%, 50%);
+            text-align: center;
+        }
+
+        h1 {
+            text-transform: capitalize;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ecf0f1;
+            text-shadow: 1px 2px 3px #2980b9;
+            font-size: 2.1rem;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        textarea {
+            background-color: #444;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+            border-radius: 10px 10px 0 0;
+            border: 20px solid #34495e;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .mainbtn {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 5px solid #2980b9;
+            background: #ecf0f1;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mainDiv">
+        <div class="centerDiv">
+            <h1>Welcome to Typing King</h1>
+            <h2 id="msg"></h2>
+            <br>
+            <textarea id="mywords" cols="100" rows="10" placeholder="Remember, be nice!"></textarea>
+            <br>
+            <button id="btn" class="mainbtn">Start</button>
+
+        </div>
+    </div>
+
+    <script>
+        const setofwords = ["Please take your dog, Cali, out for a walk – he really needs some exercise!", "The quick brown fox jumps over the lazy dog", "What a beautiful day it is on the beach, here in beautiful and sunny Hawaii.", "Rex Quinfrey, a renowned scientist, created plans for an invisibility machine.", " Do you know why all those chemicals are so hazardous to the environment?", "You never did tell me how many copper pennies where in that jar; how come?", " Max Joykner sneakily drove his car around every corner looking for his dog.", "The two boys collected twigs outside, for over an hour, in the freezing cold!", "When do you think they will get back from their adventure in Cairo, Egypt?", "Trixie and Veronica, our two cats, just love to play with their pink ball of yarn."];
+
+        const msg = document.getElementById('msg');
+        const typeWords = document.getElementById('mywords');
+        const btn = document.getElementById('btn');
+        let startTime , endTime;
+
+        playGame = () => {
+            let randomNumber = Math.floor(Math.random());
+        }
+
+        btn.addEventListener('click', function(){
+
+            if(this.innerText == 'Start'){
+                typeWords.disabled = false;
+                playGame();
+            }
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>
